@@ -39,7 +39,8 @@ P0 目标定义(人工) → P1 文献检索 → P2 数据集盘点(含证伪) �
 
 - `references/pipeline-prompts.md` — P0-P7 全部阶段提示词（{{占位符}} 替换即用）
 - `references/orchestration.md` — 蜂群编排：各阶段扇出表、共享上下文块、聚合器提示词、最小编排方案
-- `references/pitfalls.md` — 编排纪律与常见坑（三轮实践教训，**开工前必读**）
+- `references/pitfalls.md` — 编排纪律与常见坑（**开工前必读**）
+- `references/journal-policy.md` — 期刊质量控制（四道检查 + 排除/谨慎清单；P1/P5/P6 的期刊纪律）
 - `templates/` — 四大产出物的通用骨架（方案/实验计划/评分/查新）+ 执行端开工指令
 - `examples/case-structure.md` — 一个真实课题的三件套文档结构范例（脱敏）
 
