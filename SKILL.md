@@ -1,6 +1,6 @@
 ---
 name: research-swarm
-description: Research topic discovery and experiment planning pipeline for medical imaging AI papers, executed by multi-agent swarms. Use when the user asks to survey literature for a modality/organ/task, inventory public datasets, generate research ideas, score/rank proposals with multiple expert personas, run novelty or scoop checks, expand a proposal into a paper-grade plan, produce an executable experiment plan for a training team, or integrate privately-held datasets (私有数据/自有数据访谈与接入). Trigger words: 找课题、开题、调研、文献盘点、数据集盘点、评分排序、查新、实验计划、研究方案、自有数据、私有队列.
+description: "Research topic discovery and experiment planning pipeline for medical imaging AI papers, executed by multi-agent swarms. Use when the user asks to survey literature for a modality/organ/task, inventory public datasets, generate research ideas, score/rank proposals with multiple expert personas, run novelty or scoop checks, expand a proposal into a paper-grade plan, produce an executable experiment plan for a training team, or integrate privately-held datasets (私有数据/自有数据访谈与接入). Trigger words: 找课题、开题、调研、文献盘点、数据集盘点、评分排序、查新、实验计划、研究方案、自有数据、私有队列."
 ---
 
 # research-swarm — 课题发现与实验规划蜂群
