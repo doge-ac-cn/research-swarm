@@ -1,6 +1,6 @@
 ---
 name: research-swarm
-description: Research topic discovery and experiment planning pipeline for medical imaging AI papers, executed by multi-agent swarms. Use when the user asks to survey literature for a modality/organ/task, inventory public datasets, generate research ideas, score/rank proposals with multiple expert personas, run novelty or scoop checks, expand a proposal into a paper-grade plan, or produce an executable experiment plan for a training team. Trigger words: 找课题、开题、调研、文献盘点、数据集盘点、评分排序、查新、实验计划、研究方案.
+description: Research topic discovery and experiment planning pipeline for medical imaging AI papers, executed by multi-agent swarms. Use when the user asks to survey literature for a modality/organ/task, inventory public datasets, generate research ideas, score/rank proposals with multiple expert personas, run novelty or scoop checks, expand a proposal into a paper-grade plan, produce an executable experiment plan for a training team, or integrate privately-held datasets (私有数据/自有数据访谈与接入). Trigger words: 找课题、开题、调研、文献盘点、数据集盘点、评分排序、查新、实验计划、研究方案、自有数据、私有队列.
 ---
 
 # research-swarm — 课题发现与实验规划蜂群
@@ -17,7 +17,7 @@ description: Research topic discovery and experiment planning pipeline for medic
 ## 流水线总览
 
 ```
-P0 目标定义(人工) → P1 文献检索 → P2 数据集盘点(含证伪) → P3 思路生成(3簇)
+P0 目标定义(人工) → P1 文献检索 → P2 数据集盘点(含证伪) → P2.5 私有数据访谈(六问) → P3 思路生成(3簇×5轴)
   → P4 三专家评分 → [人工:选TopN] → P5 逐案查重 → [人工:继续/转向/降级]
   → P6 方案展开 → P7 窗口与竞对侦察 → 实验计划(交接执行版)
 ```
@@ -27,7 +27,8 @@ P0 目标定义(人工) → P1 文献检索 → P2 数据集盘点(含证伪) �
 | P0 | `references/pipeline-prompts.md` §P0 | — | 目标定义 | 填写 |
 | P1 | 同上 §P1 | 2-4 | 检索详析表+排除清单+配方归纳 | — |
 | P2 | 同上 §P2 | 3-4 | 数据集卡片墙+证伪清单+泄漏链图 | — |
-| P3 | 同上 §P3 | **3 起步（按主题簇）** | 思路总目录 N≈12-16 | 筛明显不可行 |
+| P2.5 | 同上 §P2.5 | 主控↔委托人六问 | 私有数据卡片+属性→价值映射+接入 gate | **访谈本身** |
+| P3 | 同上 §P3 | **3 起步（按主题簇×5 轴）** | 思路总目录 N≈12-16 | 筛明显不可行 |
 | P4 | 同上 §P4（3 个 persona） | **恒 3** | 评分汇总（均值/共识/分歧） | **选 TopN** |
 | P5 | 同上 §P5 | **每案 1 个** | 逐案查重+三类拦截风险清单 | **继续/转向/降级** |
 | P6 | 同上 §P6 | 每案 1 个 | 论文级方案（13 要素） | **立项裁决** |
